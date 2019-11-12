@@ -1,0 +1,295 @@
+body {
+  /* background-color: rgb(143, 143, 143); */
+  background: linear-gradient(rgba(87, 87, 87, 0.6), rgba(87, 87, 87, 0.6)), url("./images/brooklyn_bg_2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo_wrap {
+  width: 20%;
+  margin: 5% auto 0 auto;
+}
+
+#vapt_logo {
+  width: 100%;
+}
+
+#map-wrap {
+  width: 90%;
+  height: fit-content;
+  /* margin: -5% auto 0 auto; */
+  margin: 5% auto;
+  position: relative; 
+  left: 0; 
+  top: 0;
+}
+
+#map {
+  width: 100%;
+  position: relative;
+  /* border: 1px solid black; */
+  /* top: 0;
+  left: 0; */
+}
+
+#modal-background {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+.modal-content {
+  position: relative;
+  top: 6%;
+  background-color: #e9e9e9;
+  width: fit-content;
+  padding: 10px 15px;
+  margin: 0 auto;
+  border-radius: 4px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.33);
+     -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.33);
+          box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.33);
+}
+
+
+/* Animations */
+@-webkit-keyframes slideIn {
+  from {top: -300px; opacity: 0} 
+  to {top: 6%; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {top: -300px; opacity: 0}
+  to {top: 6%; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ICON STYLING */
+
+.icon {
+  position: absolute;
+  width: 4.5%;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.icon:hover {
+  transform: scale(1.4);
+}
+
+#icon_1 {
+  top: 60%;
+  left: 19%;
+}
+
+#icon_2 {
+  top: 35%;
+  left: 30%;
+}
+
+#icon_3 {
+  top: 48%;
+  left: 32%;
+}
+
+#icon_4 {
+  top: 42%;
+  left: 46%;
+}
+
+#icon_5 {
+  top: 36%;
+  left: 52.5%;
+}
+
+#icon_6 {
+  top: 52%;
+  left: 58%;
+}
+
+#icon_7 {
+  top: 36%;
+  left: 61%;
+}
+
+#icon_8 {
+  top: 46%;
+  left: 66%;
+}
+
+#icon_9 {
+  top: 53%;
+  left: 76%;
+}
+
+/* LABEL STYLING */
+
+.label {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#label_1 {
+  top: 51%;
+  left: 15%;
+}
+
+#label_2 {
+  top: 26%;
+  left: 28.5%;
+}
+
+#label_3 {
+  top: 56%;
+  left: 26.5%;
+}
+
+#label_4 {
+  top: 53%;
+  left: 44.5%;
+}
+
+#label_5 {
+  top: 25%;
+  left: 46.5%;
+}
+
+#label_6 {
+  top: 60%;
+  left: 53.5%;
+}
+
+#label_7 {
+  top: 25%;
+  left: 60.5%;
+}
+
+#label_8 {
+  top: 39%;
+  left: 68.5%;
+}
+
+#label_9 {
+  top: 61%;
+  left: 73%;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1300px) {
+
+  #map-wrap {
+    width: 70%;
+  }
+
+}
+
+@media only screen and (max-width: 960px) {
+
+  .label {
+    font-size: 12px;
+  }
+
+  #modal-background {
+    padding-top: 20px;
+  }
+
+  iframe {
+    width: 480px;
+    height: 270px;
+  }
+
+}
+
+@media only screen and (max-width: 680px) {
+
+  #modal-background {
+    padding-top: 0;
+  }
+
+  iframe {
+    width: 320px;
+    height: 180px;
+  }
+
+}
+
+@media only screen and (max-height: 625px) and (min-width: 1000px) {
+
+  #map-wrap {
+    width: 60%;
+    margin: 2.5% auto;
+  }
+
+  #modal-background {
+    padding-top: 20px;
+  }
+
+  iframe {
+    width: 480px;
+    height: 270px;
+  }
+
+}
+
+@media only screen and (max-height: 450px) and (min-width: 650px) {
+
+  #map-wrap {
+    width: 50%;
+    margin: 1% auto;
+  }
+
+  #modal-background {
+    padding-top: 0;
+  }
+
+  iframe {
+    width: 320px;
+    height: 180px;
+  }
+
+}
