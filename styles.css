@@ -18,7 +18,7 @@ body {
   width: 90%;
   height: fit-content;
   /* margin: -5% auto 0 auto; */
-  margin: 5% auto;
+  margin: 5% auto 0 auto;
   position: relative; 
   left: 0; 
   top: 0;
@@ -118,47 +118,47 @@ body {
 }
 
 #icon_1 {
-  top: 60%;
+  top: 58%;
   left: 19%;
 }
 
 #icon_2 {
-  top: 35%;
+  top: 33%;
   left: 30%;
 }
 
 #icon_3 {
-  top: 48%;
+  top: 46%;
   left: 32%;
 }
 
 #icon_4 {
-  top: 42%;
+  top: 40%;
   left: 46%;
 }
 
 #icon_5 {
-  top: 36%;
+  top: 34%;
   left: 52.5%;
 }
 
 #icon_6 {
-  top: 52%;
+  top: 50%;
   left: 58%;
 }
 
 #icon_7 {
-  top: 36%;
+  top: 34%;
   left: 61%;
 }
 
 #icon_8 {
-  top: 46%;
+  top: 44%;
   left: 66%;
 }
 
 #icon_9 {
-  top: 53%;
+  top: 51%;
   left: 76%;
 }
 
@@ -174,47 +174,47 @@ body {
 }
 
 #label_1 {
-  top: 51%;
+  top: 49%;
   left: 15%;
 }
 
 #label_2 {
-  top: 26%;
+  top: 24%;
   left: 28.5%;
 }
 
 #label_3 {
-  top: 56%;
+  top: 54%;
   left: 26.5%;
 }
 
 #label_4 {
-  top: 53%;
+  top: 51%;
   left: 44.5%;
 }
 
 #label_5 {
-  top: 25%;
+  top: 23%;
   left: 46.5%;
 }
 
 #label_6 {
-  top: 60%;
+  top: 58%;
   left: 53.5%;
 }
 
 #label_7 {
-  top: 25%;
+  top: 23%;
   left: 60.5%;
 }
 
 #label_8 {
-  top: 39%;
+  top: 36%;
   left: 68.5%;
 }
 
 #label_9 {
-  top: 61%;
+  top: 59%;
   left: 73%;
 }
 
@@ -228,14 +228,23 @@ body {
 
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1024px) and (min-height: 480px){
+
+  h2 {
+    font-size: 22px;
+  }
 
   .label {
     font-size: 12px;
   }
 
+  #map-wrap {
+    margin-top: 12.5%;
+    width: 70%;
+  }
+
   #modal-background {
-    padding-top: 20px;
+    padding-top: 15%;
   }
 
   iframe {
@@ -245,28 +254,19 @@ body {
 
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (min-width: 812px) and (max-height: 480px) {
 
-  #modal-background {
-    padding-top: 0;
+  h2 {
+    font-size: 20px;
   }
-
-  iframe {
-    width: 320px;
-    height: 180px;
-  }
-
-}
-
-@media only screen and (max-height: 625px) and (min-width: 1000px) {
 
   #map-wrap {
+    margin-top: 0;
     width: 60%;
-    margin: 2.5% auto;
   }
 
   #modal-background {
-    padding-top: 20px;
+    padding-top: 0;
   }
 
   iframe {
@@ -276,15 +276,58 @@ body {
 
 }
 
-@media only screen and (max-height: 450px) and (min-width: 650px) {
+@media only screen and (max-width: 768px) {
+
+  h2 {
+    font-size: 20px;
+  }
 
   #map-wrap {
-    width: 50%;
-    margin: 1% auto;
+    margin-top: 32.5%;
+    width: 90%;
+  }
+
+  #modal-background {
+    padding-top: 27.5%;
+  }
+
+  iframe {
+    width: 480px;
+    height: 270px;
+  }
+
+}
+
+@media only screen and (max-width: 812px) and (max-height: 480px) {
+
+  h2 {
+    font-size: 18px;
+  }
+
+  #map-wrap {
+    margin-top: 0;
+    width: 90%;
   }
 
   #modal-background {
     padding-top: 0;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  h2 {
+    font-size: 18px;
+  }
+
+  #map-wrap {
+    margin-top: 37.5%;
+    width: 90%;
+  }
+
+  #modal-background {
+    padding-top: 32.5%;
   }
 
   iframe {
