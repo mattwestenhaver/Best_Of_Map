@@ -1,35 +1,36 @@
+@font-face {
+  font-family: "brown-regular";
+  src: url("fonts/Brown-Regular.woff") format('woff');
+}
+
 body {
   /* background-color: rgb(143, 143, 143); */
-  background: linear-gradient(rgba(87, 87, 87, 0.6), rgba(87, 87, 87, 0.6)), url("./images/brooklyn_bg_2.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(128, 128, 128, 0.6), rgba(128, 128, 128, 0.6)), url("./images/brooklyn_bg_2.jpg") no-repeat center center fixed;
   background-size: cover;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "brown-regular";
 }
 
-.logo_wrap {
-  width: 20%;
-  margin: 5% auto 0 auto;
+h1 {
+  text-align: center;
+  margin-bottom: -6%;
+  font-size: 36px;
 }
 
-#vapt_logo {
-  width: 100%;
+#flex-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
 }
 
 #map-wrap {
-  width: 90%;
-  height: fit-content;
-  /* margin: -5% auto 0 auto; */
-  margin: 5% auto 0 auto;
-  position: relative; 
-  left: 0; 
-  top: 0;
+  position: relative;
+  align-self: center;
+  width: 80%;
 }
 
 #map {
   width: 100%;
-  position: relative;
-  /* border: 1px solid black; */
-  /* top: 0;
-  left: 0; */
 }
 
 #modal-background {
@@ -108,7 +109,7 @@ body {
 
 .icon {
   position: absolute;
-  width: 4.5%;
+  width: 3.5%;
   cursor: pointer;
   transition: transform .2s;
 }
@@ -117,52 +118,62 @@ body {
   transform: scale(1.4);
 }
 
+#icon_0 {
+  width: 6%;
+  top: 55%;
+  left: 22%;
+}
+
 #icon_1 {
-  top: 58%;
-  left: 19%;
+  top: 45%;
+  left: 47%;
 }
 
 #icon_2 {
-  top: 33%;
-  left: 30%;
-}
-
-#icon_3 {
-  top: 46%;
-  left: 32%;
-}
-
-#icon_4 {
-  top: 40%;
-  left: 46%;
-}
-
-#icon_5 {
   top: 34%;
   left: 52.5%;
 }
 
+#icon_3 {
+  top: 42%;
+  left: 54%;
+}
+
+#icon_4 {
+  top: 37%;
+  left: 61%;
+}
+
+#icon_5 {
+  top: 34%;
+  left: 65%;
+}
+
 #icon_6 {
-  top: 50%;
-  left: 58%;
+  top: 43%;
+  left: 68%;
 }
 
 #icon_7 {
   top: 34%;
-  left: 61%;
+  left: 70%;
 }
 
 #icon_8 {
-  top: 44%;
-  left: 66%;
+  top: 40%;
+  left: 72%;
 }
 
 #icon_9 {
-  top: 51%;
-  left: 76%;
+  top: 45%;
+  left: 78%;
 }
 
 /* LABEL STYLING */
+
+h3 {
+  text-align: center;
+}
 
 .label {
   opacity: 0;
@@ -171,62 +182,69 @@ body {
   transition: 0.3s;
   font-weight: 600;
   font-size: 16px;
+  text-align: center;
 }
 
+/* #label_0 {
+  top: 50%;
+  left: 20%;
+} */
+
 #label_1 {
-  top: 49%;
-  left: 15%;
+  top: 50%;
+  left: 42%;
 }
 
 #label_2 {
-  top: 24%;
-  left: 28.5%;
+  top: 26%;
+  left: 50%;
 }
 
 #label_3 {
-  top: 54%;
-  left: 26.5%;
+  top: 48%;
+  left: 48%;
 }
 
 #label_4 {
-  top: 51%;
-  left: 44.5%;
+  top: 25%;
+  left: 58%;
 }
 
 #label_5 {
-  top: 23%;
-  left: 46.5%;
+  top: 24%;
+  left: 58%;
 }
 
 #label_6 {
-  top: 58%;
-  left: 53.5%;
+  top: 48%;
+  left: 62.5%;
 }
 
 #label_7 {
-  top: 23%;
-  left: 60.5%;
-}
-
-#label_8 {
-  top: 36%;
+  top: 24%;
   left: 68.5%;
 }
 
+#label_8 {
+  top: 33%;
+  left: 74%;
+}
+
 #label_9 {
-  top: 59%;
-  left: 73%;
+  top: 51%;
+  left: 75%;
 }
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1300px) and (min-height: 630px) {
 
   #map-wrap {
     width: 70%;
   }
 
 }
+
 
 @media only screen and (max-width: 1024px) and (min-height: 480px){
 
@@ -238,9 +256,12 @@ body {
     font-size: 12px;
   }
 
+  h1 {
+    font-size: 32px;
+  }
+
   #map-wrap {
-    margin-top: 12.5%;
-    width: 70%;
+    width: 75%;
   }
 
   #modal-background {
@@ -254,14 +275,70 @@ body {
 
 }
 
+@media only screen and (max-width: 900px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  #label_1 {
+    top: 50%;
+    left: 41%;
+  }
+  
+  #label_2 {
+    top: 25%;
+    left: 49%;
+  }
+  
+  #label_3 {
+    top: 48%;
+    left: 47%;
+  }
+  
+  #label_4 {
+    top: 24%;
+    left: 57%;
+  }
+  
+  #label_5 {
+    top: 23%;
+    left: 57%;
+  }
+  
+  #label_6 {
+    top: 48%;
+    left: 61.5%;
+  }
+  
+  #label_7 {
+    top: 23%;
+    left: 68%;
+  }
+  
+  #label_8 {
+    top: 33%;
+    left: 75%;
+  }
+  
+  #label_9 {
+    top: 51%;
+    left: 73%;
+  }
+
+}
+
 @media only screen and (min-width: 812px) and (max-height: 480px) {
 
   h2 {
     font-size: 20px;
   }
 
+  h1 {
+    font-size: 26px;
+  }
+
   #map-wrap {
-    margin-top: 0;
     width: 60%;
   }
 
@@ -282,8 +359,11 @@ body {
     font-size: 20px;
   }
 
+  h1 {
+    font-size: 24px;
+  }
+
   #map-wrap {
-    margin-top: 32.5%;
     width: 90%;
   }
 
@@ -304,8 +384,11 @@ body {
     font-size: 18px;
   }
 
+  h1 {
+    font-size: 24px;
+  }
+
   #map-wrap {
-    margin-top: 0;
     width: 90%;
   }
 
@@ -321,8 +404,11 @@ body {
     font-size: 18px;
   }
 
+  h1 {
+    font-size: 24px;
+  }
+
   #map-wrap {
-    margin-top: 37.5%;
     width: 90%;
   }
 
