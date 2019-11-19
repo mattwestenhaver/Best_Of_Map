@@ -82,7 +82,11 @@ function portraitAlert() {
   }
 }
 
-window.addEventListener("resize", portraitAlert, false)
+window.addEventListener("orientationchange", () => {
+  setTimeout(() => {
+    portraitAlert()
+  }, 100)
+})
 
 icons.forEach(i => {
   i.addEventListener('click', clickEventHandler)
@@ -92,5 +96,5 @@ icons.forEach(i => {
 
 closeBtn.addEventListener('click', function() {
   modal.css('display', 'none')
-  modalUrl.attr('src', 'https://blank.org/')
+  modalUrl.attr('src', 'https://videos.virtualapt.com/blank/')
 })
